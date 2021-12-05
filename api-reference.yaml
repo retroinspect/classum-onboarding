@@ -1,0 +1,189 @@
+---
+openapi: 3.0.0
+paths:
+  "/hello":
+    get:
+      operationId: AppController_queryParamAPI
+      parameters:
+      - name: name
+        required: true
+        in: query
+        schema:
+          type: string
+      - name: age
+        required: true
+        in: query
+        schema:
+          type: string
+      responses:
+        '200':
+          description: ''
+  "/coursework/{id}/view":
+    get:
+      operationId: AppController_getCoursework
+      parameters:
+      - name: id
+        required: true
+        in: path
+        schema:
+          type: string
+      responses:
+        '200':
+          description: ''
+  "/student":
+    post:
+      operationId: AppController_postStudent
+      parameters: []
+      responses:
+        '201':
+          description: ''
+  "/user":
+    get:
+      operationId: UserController_getUserList
+      parameters: []
+      responses:
+        '200':
+          description: ''
+    post:
+      operationId: UserController_postUser
+      parameters: []
+      responses:
+        '201':
+          description: ''
+  "/user/{id}":
+    get:
+      operationId: UserController_getUser
+      parameters:
+      - name: id
+        required: true
+        in: path
+        schema:
+          type: string
+      responses:
+        '200':
+          description: ''
+    delete:
+      operationId: UserController_deleteUser
+      parameters:
+      - name: id
+        required: true
+        in: path
+        schema:
+          type: string
+      responses:
+        '200':
+          description: ''
+    put:
+      operationId: UserController_putUser
+      parameters:
+      - name: id
+        required: true
+        in: path
+        schema:
+          type: string
+      responses:
+        '200':
+          description: ''
+  "/space":
+    get:
+      operationId: SpaceController_getSpaceList
+      parameters: []
+      responses:
+        '200':
+          description: ''
+    post:
+      operationId: SpaceController_postSpace
+      parameters: []
+      responses:
+        '201':
+          description: ''
+  "/space/{id}":
+    get:
+      operationId: SpaceController_getSpace
+      parameters:
+      - name: id
+        required: true
+        in: path
+        schema:
+          type: string
+      responses:
+        '200':
+          description: ''
+    delete:
+      operationId: SpaceController_deleteSpace
+      parameters:
+      - name: id
+        required: true
+        in: path
+        schema:
+          type: string
+      responses:
+        '200':
+          description: ''
+    put:
+      operationId: SpaceController_putSpace
+      parameters:
+      - name: id
+        required: true
+        in: path
+        schema:
+          type: string
+      responses:
+        '200':
+          description: ''
+  "/post":
+    get:
+      operationId: PostController_getPostList
+      parameters: []
+      responses:
+        '200':
+          description: ''
+    post:
+      operationId: PostController_postPost
+      parameters: []
+      responses:
+        '201':
+          description: ''
+  "/post/{id}":
+    get:
+      operationId: PostController_getPost
+      parameters:
+      - name: id
+        required: true
+        in: path
+        schema:
+          type: string
+      responses:
+        '200':
+          description: ''
+    delete:
+      operationId: PostController_deletePost
+      parameters:
+      - name: id
+        required: true
+        in: path
+        schema:
+          type: string
+      responses:
+        '200':
+          description: ''
+    put:
+      operationId: PostController_putPost
+      parameters:
+      - name: id
+        required: true
+        in: path
+        schema:
+          type: string
+      responses:
+        '200':
+          description: ''
+info:
+  title: Classum Onboarding Project
+  description: Project API description
+  version: '1.0'
+  contact: {}
+tags: []
+servers: []
+components:
+  schemas: {}

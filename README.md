@@ -7,7 +7,7 @@
 4. POST API 구현하기
 5. typeORM으로 mysql 테이블 만들어 보기
 6. typeORM으로 다음 테이블 만들고 릴레이션 매핑해보기
-7. 위에 테이블에 데이터를 CRUD 하는 API 만들기
+7. 위에 테이블에 데이터를 CRUD 하는 API 만들기 (명세는 /api 참조)
 
 
 ## 질문
