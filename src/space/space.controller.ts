@@ -12,7 +12,7 @@ export class SpaceController {
     }
 
     @Get('/:id')
-    async getSpace(@Param('id') id: string) {
+    async getSpace(@Param('id') id: number) {
         const result = await this.spaceService.findOne(+id);
         return result;
     }
@@ -24,25 +24,19 @@ export class SpaceController {
             return result;
         }
         catch (err) {
-            if (err.code === "ER_NO_REFERENCED_ROW_2") {
-                return {
-                    message: "User does not exist"
-                }
-            }
-
             return {
-                message: "Something went wrong"
+                error: err
             }
         }
     }
 
     @Delete('/:id')
-    deleteSpace(@Param('id') id: string) {
+    deleteSpace(@Param('id') id: number) {
         return this.spaceService.delete(+id);
     }
 
     @Put('/:id')
-    putSpace(@Param('id') id: string, @Body() spaceData) {
+    putSpace(@Param('id') id: number, @Body() spaceData) {
         return this.spaceService.update(+id, spaceData);
     }
 
